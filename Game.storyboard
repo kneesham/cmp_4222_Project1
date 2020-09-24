@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8WS-wZ-XRc">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Game Collection View-->
+        <scene sceneID="hMa-pS-0Eb">
+            <objects>
+                <collectionViewController id="8WS-wZ-XRc" customClass="GameCollectionView" customModule="Project1" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" minimumZoomScale="3" maximumZoomScale="3" dataMode="prototypes" id="EhZ-EF-U2H">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="0.89253084153330342" green="1" blue="0.98797738513410083" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" sectionInsetReference="safeArea" id="wze-I9-g7z">
+                            <size key="itemSize" width="48" height="96"/>
+                            <size key="headerReferenceSize" width="0.0" height="100"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="20" minY="10" maxX="20" maxY="10"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CardCell" id="G3V-h0-X4c" customClass="CardGameCell" customModule="Project1" customModuleProvider="target">
+                                <rect key="frame" x="20" y="154" width="48" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WD6-Np-ZLe">
+                                    <rect key="frame" x="0.0" y="0.0" width="48" height="96"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QCb-rE-0U3" userLabel="FrontLabel">
+                                            <rect key="frame" x="0.0" y="25" width="46" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a1g-lH-wwC" userLabel="BackLabel">
+                                            <rect key="frame" x="0.0" y="25" width="46" height="26"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemTealColor"/>
+                                    <rect key="contentStretch" x="1" y="1" width="1" height="1"/>
+                                    <constraints>
+                                        <constraint firstItem="a1g-lH-wwC" firstAttribute="top" secondItem="WD6-Np-ZLe" secondAttribute="top" constant="25" id="2HX-RU-m6u"/>
+                                        <constraint firstItem="a1g-lH-wwC" firstAttribute="leading" secondItem="WD6-Np-ZLe" secondAttribute="leading" id="B74-mY-d1v"/>
+                                        <constraint firstAttribute="trailing" secondItem="a1g-lH-wwC" secondAttribute="trailing" constant="2" id="RAe-R2-7ci"/>
+                                        <constraint firstAttribute="bottom" secondItem="a1g-lH-wwC" secondAttribute="bottom" constant="45" id="SEb-tJ-iuR"/>
+                                        <constraint firstItem="QCb-rE-0U3" firstAttribute="top" secondItem="WD6-Np-ZLe" secondAttribute="top" constant="25" id="ScV-zu-EMa"/>
+                                        <constraint firstAttribute="bottom" secondItem="QCb-rE-0U3" secondAttribute="bottom" constant="45" id="Sn2-6e-VX7"/>
+                                        <constraint firstItem="QCb-rE-0U3" firstAttribute="leading" secondItem="WD6-Np-ZLe" secondAttribute="leading" id="c2L-lW-t7E"/>
+                                        <constraint firstAttribute="trailing" secondItem="QCb-rE-0U3" secondAttribute="trailing" constant="2" id="tdT-x4-Jnn"/>
+                                    </constraints>
+                                </collectionViewCellContentView>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="backLabel" destination="a1g-lH-wwC" id="2ms-d8-mSI"/>
+                                    <outlet property="frontLabel" destination="QCb-rE-0U3" id="6GC-p7-YCd"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <collectionReusableView key="sectionHeaderView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" reuseIdentifier="Header" id="wsJ-f6-g5u">
+                            <rect key="frame" x="0.0" y="44" width="414" height="100"/>
+                            <autoresizingMask key="autoresizingMask"/>
+                        </collectionReusableView>
+                        <connections>
+                            <outlet property="dataSource" destination="8WS-wZ-XRc" id="S1R-L9-Ldf"/>
+                            <outlet property="delegate" destination="8WS-wZ-XRc" id="dhX-Q5-vcC"/>
+                        </connections>
+                    </collectionView>
+                    <value key="contentSizeForViewInPopover" type="size" width="348" height="896"/>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rIK-fF-vqs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-501.44927536231887" y="-20.758928571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemTealColor">
+            <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
